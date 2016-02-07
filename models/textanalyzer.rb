@@ -1,5 +1,5 @@
 class TextAnalyzer
- 
+  attr_reader :text
   def initialize(text)
     @text = text
   end
@@ -17,7 +17,7 @@ class TextAnalyzer
     @text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
   end
  
-def most_used_letter
+  def most_used_letter
     s1 = @text.downcase.gsub(/[^a-z]/, '') #gets rid of spaces
     arr = s1.split('')
     arr1 = arr.uniq
