@@ -9,6 +9,7 @@ end
 
 post '/' do
   text_from_user = params[:user_text]
+  @grinder = TextAnalyzer.new(text_from_user)
   erb :results
 end
 
