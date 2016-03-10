@@ -1,9 +1,10 @@
 <h1> Your Text Analysis </h1>
 
-<h2>Number of Words:</h2>
+<h2>Number of Words:<%= @grinder.count_of_words  %></h2>
 
-<h2>Vowels:</h2>
+<h2>Vowels:<%=  @grinder.count_of_vowels  %></h2>
 
-<h2>Consonants:</h2>
+<h2>Consonants:<%=  @grinder.count_of_consonants  %></h2>
 
-<h2>Most Common Letter:___ used ___ times</h2>
+<% king_letter = @grinder.most_used_letter %>
+<h2>Most Common Letter: <%= king_letter[:most_used_letter] %>, used <%= king_letter[:letter_count]  %> times</h2>
