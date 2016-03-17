@@ -1,5 +1,5 @@
 class TextAnalyzer
- 
+  attr_reader :text
   def initialize(text)
     @text = text
   end
@@ -42,9 +42,6 @@ def most_used_letter
     biggest
   end
 
-  def text
-    @text
-  end
  
 end
  
