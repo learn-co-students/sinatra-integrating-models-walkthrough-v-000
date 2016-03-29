@@ -19,7 +19,7 @@ post '/' do
   @consonants = @analyzed_text.count_of_consonants
   @most_com_letter = @analyzed_text.most_used_letter
 
-  raise @analyzed_text.text.inspect
+  #raise @analyzed_text.text.inspect
   erb :results
 end
 
