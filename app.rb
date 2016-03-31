@@ -7,8 +7,9 @@ get '/' do
   erb :index
 end
 
-post '/' do
-  text_from_user = params[:user_text]
+post '/' do 
+  puts params
+  @analyzed_text = TextAnalyzer.new(params[:user_text])
   erb :results
 end
 
