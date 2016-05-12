@@ -22,12 +22,12 @@ class TextAnalyzer
     letters_to_compare = all_letters_in_string.uniq
     most_used_letter = ""
     letter_count = 0
-    
+
     letters_to_compare.map do |letter|
       letter_repetitions = all_letters_in_string.count(letter)
       if letter_repetitions > letter_count
         letter_count = letter_repetitions
-        most_used_letter = letter
+        most_used_letter = letter.upcase
       end
     end
     biggest = [most_used_letter, letter_count]
