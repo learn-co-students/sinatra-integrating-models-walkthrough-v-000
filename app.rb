@@ -12,5 +12,9 @@ post '/' do
   erb :results
 end
 
+post '/' do
+  @analyzed_text = TextAnalyzer.new(params[:user_text])
+  erb :results
+end
 
 end
