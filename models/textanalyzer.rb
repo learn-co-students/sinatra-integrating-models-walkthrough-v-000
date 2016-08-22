@@ -17,7 +17,7 @@ class TextAnalyzer
     @text.downcase.scan(/[bcdfghjklmnpqrstvwxyz]/).count
   end
  
-def most_used_letter
+  def most_used_letter
     all_letters_in_string = @text.downcase.gsub(/[^a-z]/, '').split('') #gets rid of spaces and turns it into an array
     letters_to_compare = all_letters_in_string.uniq
     most_used_letter = ""
