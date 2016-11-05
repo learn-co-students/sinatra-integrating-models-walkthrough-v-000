@@ -8,9 +8,9 @@ get '/' do
 end
 
 post '/' do
-  text_from_user = params[:user_text]
-  erb :results
+  @analyzed_text = TextAnalyzer.new(params[:user_text])
+ # binding.pry
+ erb :results
 end
-
 
 end
