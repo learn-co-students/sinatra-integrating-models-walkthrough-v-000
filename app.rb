@@ -1,3 +1,4 @@
+require 'pry'
 require_relative 'config/environment'
 require_relative 'models/textanalyzer.rb'
 
@@ -8,7 +9,8 @@ get '/' do
 end
 
 post '/' do
-  text_from_user = params[:user_text]
+  @analyzed_text = TextAnalyzer.new(params[:user_text])
+  @analyzed_text.count_of_words
   erb :results
 end
 
