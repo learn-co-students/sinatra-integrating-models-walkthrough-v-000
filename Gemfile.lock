@@ -60,6 +60,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  nokogiri
   pry
   rack-test
   rake
@@ -70,4 +71,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.10.2
+   1.14.6
