@@ -8,6 +8,7 @@ get '/' do
 end
 
 post '/' do
+  @analyzed_text = TextAnalyzer.new(params[:user_text])
   text_from_user = params[:user_text]
   erb :results
 end
