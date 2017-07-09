@@ -10,6 +10,7 @@ end
 
 post '/' do
   @anlyzed_text = TextAnalyzer.new(params[:user_text])
+  analyzed = @analyzed_text
   binding.pry
   erb :results
 end
