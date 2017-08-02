@@ -12,11 +12,11 @@ class TextAnalyzer
   end
 
   def count_of_vowels
-    @text.scan(/[aeoui]/).count
+    @text.downcase.scan(/[aeoui]/).count
   end
 
   def count_of_consonants
-    @text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
+    @text.downcase.scan(/[bcdfghjklmnpqrstvwxyz]/).count
   end
 
   def most_used_letter
@@ -38,3 +38,4 @@ class TextAnalyzer
   end
 
 end
+#binding.pry 
