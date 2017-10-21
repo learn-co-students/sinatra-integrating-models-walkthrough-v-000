@@ -23,9 +23,9 @@ Let's take a closer look at the starter code. Run `shotgun` to make sure that yo
 	+  `post '/' do`, which receives the form data through params and renders the results page.
 
 ## Creating a model
-We could analyze all of the data from `params[:user_text]` in our application controller, but our route would get messy very quickly. Instead, let's create a new class inside of our `models` directory that will take care of the analysis of the text. In your `models` directory, create a new file called `textanalyzer.rb`.
+We could analyze all of the data from `params[:user_text]` in our application controller, but our route would get messy very quickly. Instead, let's create a new class inside of our `models` directory that will take care of the analysis of the text. In your `models` directory, create a new file called `text_analyzer.rb`.
 
-We're not going to go deeply into creating models in this lesson, as you've covered it in depth in our unit on object oriented programming. Instead, paste the following code in to your `textanalyzer.rb` file:
+We're not going to go deeply into creating models in this lesson, as you've covered it in depth in our unit on object oriented programming. Instead, paste the following code in to your `text_analyzer.rb` file:
 ```ruby
 class TextAnalyzer
   attr_reader :text
