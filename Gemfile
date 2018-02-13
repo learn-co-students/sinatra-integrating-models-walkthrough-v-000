@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
+gem 'learn-co'
 
 gem 'sinatra'
     gem 'rake'
@@ -9,7 +10,7 @@ gem 'sinatra'
     gem 'shotgun'
     gem 'pry'
     gem 'require_all'
-    
+
 group :test do
       gem 'rspec'
       gem 'capybara'
