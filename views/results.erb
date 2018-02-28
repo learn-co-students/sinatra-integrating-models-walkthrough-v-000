@@ -6,5 +6,5 @@
 
 <h2>Consonants: <%= @analyzed_text.count_of_consonants %></h2>
 
-<% letter_count = @analyzed_text.most_used_letter.first %>
-<h2>Most Common Letter:  <%= letter_count[0].upcase %>, used <%= letter_count[1] %> times</h2>
+<% most_used = @analyzed_text.most_used_letter %>
+<h2>Most Common Letter:  <%= letter_count.keys.first.upcase %>, used <%= most_used.values.first %> times</h2>
