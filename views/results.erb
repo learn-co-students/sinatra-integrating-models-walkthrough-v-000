@@ -1,9 +1,11 @@
 <h1>Your Text Analysis</h1>
 
-<h2>Number of Words: </h2>
+<h3>Number of Words: <%= @analyzed_text.count_of_words %></h3>
 
-<h2>Vowels: </h2>
+<h3>Vowels: <%= @analyzed_text.count_of_vowels %></h3>
 
-<h2>Consonants: </h2>
-
-<h2>Most Common Letter: _____ used _____ times</h2>
+<h3>Consonants: <%= @analyzed_text.count_of_consonants%></h3>
+  <% hash = @analyzed_text.most_used_letter%> 
+  <% hash.each do |letter, number| %>
+<h3>Most Common Letter: <%= letter.capitalize %>, used <%= number %> times</h3>
+  <% end %>
