@@ -1,4 +1,3 @@
-# Your TextAnalyzer model code will go here.
 class TextAnalyzer
   attr_reader :text
 
@@ -16,7 +15,7 @@ class TextAnalyzer
   end
 
   def count_of_consonants
-    text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
+    text.scan(/[bcdfghjklmnpqrstvwxyz]).count
   end
 
   def most_used_letter
@@ -38,6 +37,6 @@ class TextAnalyzer
       end
     end
 
-    biggest
+    biggest 
   end
 end
