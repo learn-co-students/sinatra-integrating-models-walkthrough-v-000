@@ -9,9 +9,6 @@ class App < Sinatra::Base
   post '/' do
     text_from_user = params[:user_text]
     @analyzed_text = TextAnalyzer.new(text_from_user)
-    h = @analyzed_text.most_used_letter
-    h.each  {|k, v| @key = k
-                    @value = v}
     erb :results
   end
 end
