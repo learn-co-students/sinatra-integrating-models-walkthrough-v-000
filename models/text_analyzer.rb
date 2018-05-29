@@ -18,18 +18,18 @@ class TextAnalyzer
     @text_array.select{ |c| c =~ /[bcdfghjklmnpqrstvwxyz]/ }.count
   end
 
-  def most_common_letter
+  def most_used_letter
     used_x_times = 0
-    letter = ''
+    most_used_letter = ''
 
     @text_array.each do |char|
       count = @text_array.count(char)
       if count > used_x_times && char != ' '
         used_x_times = count
-        letter = char
+        most_used_letter = char
       end
     end
 
-    {letter: letter.upcase, used_x_times: used_x_times}
+    {letter: most_used_letter.upcase, used: used_x_times}
   end
 end
