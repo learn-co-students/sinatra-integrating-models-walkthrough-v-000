@@ -1,6 +1,6 @@
 describe App do
 
-  describe 'GET /' do
+puts   describe 'GET /' do
     it 'sends a 200 status code' do
       get '/'
       expect(last_response.status).to eq(200)
@@ -13,7 +13,7 @@ describe App do
     end
   end
 
-  describe 'POST /' do
+ puts describe 'POST /' do
     it "displays string results" do
       visit '/'
 
@@ -26,7 +26,7 @@ describe App do
     end
   end
 
-  describe 'TextAnalyzer Class' do
+puts   describe 'TextAnalyzer Class' do
     let!(:words) { TextAnalyzer.new("mirror mirror on the wall") }
 
     it 'can initialize a new instance of the class' do
