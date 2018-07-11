@@ -19,6 +19,8 @@ describe App do
 
       fill_in(:user_text, :with => "Green Eggs and Ham")
       click_button "submit"
+      expect(page.status_code).to eq(200)
+      #binding.pry
       expect(page).to have_text("Number of Words: 4")
       expect(page).to have_text("Vowels: 5")
       expect(page).to have_text("Consonants: 10")
