@@ -1,9 +1,15 @@
 <h1>Your Text Analysis</h1>
 
 <h2>Number of Words: </h2>
+<% @analyzed_text.count %>
 
 <h2>Vowels: </h2>
+string.count('aeiou')
 
 <h2>Consonants: </h2>
+string.count('(?i)([a-z&&[^aeiou]]){3,}')
 
 <h2>Most Common Letter: _____ used _____ times</h2>
+string.split('')
+      .each_with_object(Hash.new(0)) { |ch,hash| hash[ch] += 1 }
+      .max_by{ |ch,count| count }

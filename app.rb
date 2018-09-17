@@ -6,9 +6,14 @@ class App < Sinatra::Base
     erb :index
   end
 
+get '/nothing' do
+  status 299
+  body ""
+end
+end
   post '/' do
     text_from_user = params[:user_text]
-
     erb :results
+    return @analyzed_text
   end
 end
