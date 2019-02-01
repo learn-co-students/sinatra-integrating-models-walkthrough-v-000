@@ -30,6 +30,7 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (12.3.1)
+    rb-readline (0.5.5)
     require_all (2.0.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
@@ -67,6 +68,7 @@ DEPENDENCIES
   pry
   rack-test
   rake
+  rb-readline
   require_all
   rspec
   shotgun
@@ -74,4 +76,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.16.2
+   1.17.3
