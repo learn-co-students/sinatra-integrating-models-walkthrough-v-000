@@ -10,11 +10,11 @@ class TextAnalyzer
     end
 
     def count_of_vowels
-      text.scan(/[aeoui]/).count
+      self.text.scan(/[aeoui]/).count  #self puede ir o no. Algo nuevo q se les ocurrio usar en el curso pero hay zero documentacion.
     end
 
     def count_of_consonants
-      text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
+      self.text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
     end
 
     def most_used_letter
