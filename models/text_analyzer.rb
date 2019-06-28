@@ -49,8 +49,9 @@ class TextAnalyzer
     # biggest
     
     # I think I found a quicker way than above ^^^, with less code:
-    most_common = letter_hash.sort_by{ |key, value| value }.last # Returns an array containing the letter that appears the most and its corresponding number of appearances. Ex: ["f", 13]
+    most_common = letter_hash.sort_by{ |key, value| value }.last 
+    # That ^^^ sorts the hash by its values, then returns an array containing the letter that appears the most and its corresponding number of appearances. Ex: ["f", 13]
     
-    biggest = { most_common.first => most_common.last }
+    biggest = { most_common.first => most_common.last } # I'll have to compare the speeds of each method later.
   end
 end
