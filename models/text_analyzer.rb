@@ -7,7 +7,7 @@ class TextAnalyzer
   end 
   
   def count_of_words
-    words = text.strip.split(" ") # I added #strip for an edge case.
+    words = text.split(" ") # I thought I also needed #strip, but I don't.
     words.count 
   end
   
@@ -25,7 +25,7 @@ class TextAnalyzer
     # Next time, I'll try to figure this out on my own. Given the complexity, I'll use their solution for now.
     # However, I think I'll rename a few of the variables, for the sake of semantics. And I'll use a method or two that makes a bit more sense.
     
-    s1 = text.gsub(/[^a-z]/, '') # gets rid of spaces
+    s1 = text.gsub(/[^a-z]/, '') # gets rid of spaces, numbers, characters, etc.
     arr = s1.split('') # array of letters
     arr1 = arr.uniq # UNIQUE array of letters
     letter_hash = {} # This will contain each letter from the @text string and the number of times it appears.
