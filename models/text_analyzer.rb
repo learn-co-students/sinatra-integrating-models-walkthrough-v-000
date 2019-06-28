@@ -7,8 +7,9 @@ class TextAnalyzer
   end 
   
   def count_of_words
-    words = text.split(" ") # I thought I also needed #strip, but I don't.
-    words.count 
+    # words = text.split(" ") # I thought I also needed #strip, but I don't.
+    # words.count 
+    text.split(" ").count # Simplified
   end
   
   def count_of_vowels
@@ -34,24 +35,27 @@ class TextAnalyzer
       letter_hash[letter] = arr.count(letter)
     end
     
-    # biggest = { letter_hash.keys.first => letter_hash[letter_hash.keys.first] }
+    biggest = { letter_hash.keys.first => letter_hash[letter_hash.keys.first] }
     # That ^^^ works, but this is equivalent:
-    # biggest = { letter_hash.keys.first => letter_hash.values.first }
-    # 
-    # letter_hash.each do |key, value|
-    #   if value > biggest.values.first 
-    #     biggest = {}
-    #     biggest[key] = value 
-    #     # Or, you could do biggest = {key => value}
-    #   end 
-    # end
-    # 
-    # biggest
+    biggest = { letter_hash.keys.first => letter_hash.values.first }
+    
+    letter_hash.each do |key, value|
+     if value > biggest.values.first 
+       biggest = {}
+       biggest[key] = value 
+       # Or, you could do biggest = {key => value}
+     end 
+    end
+    
+    biggest
     
     # I think I found a quicker way than above ^^^, with less code:
-    most_common = letter_hash.sort_by{ |key, value| value }.last 
+    # most_common = letter_hash.sort_by{ |key, value| value }.last 
     # That ^^^ sorts the hash by its values, then returns an array containing the letter that appears the most and its corresponding number of appearances. Ex: ["f", 13]
+    # { most_common.first => most_common.last } # I'll have to compare the speeds of each method later. Originally, I set this to a variable, but that's not really needed.
     
-    biggest = { most_common.first => most_common.last } # I'll have to compare the speeds of each method later.
+    # Unfortunately, this doesn't work. It fails the tests because of that call to #last. 
+    # When there's a tie (multiple letters appearing an equal number of times), the FIRST letter that appears in the string should be returned. #last doesn't do that.
+    # I'll play around with this later.
   end
 end
