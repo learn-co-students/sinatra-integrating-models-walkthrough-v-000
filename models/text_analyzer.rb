@@ -20,7 +20,7 @@ class TextAnalyzer
     
   end 
   
-  def most_user_letter
+  def most_used_letter
       s1 = text.gsub(/[^a-z]/, '') # gets rid of spaces
     arr = s1.split('')
     arr1 = arr.uniq
