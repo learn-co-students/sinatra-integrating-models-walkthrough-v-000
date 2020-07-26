@@ -7,7 +7,11 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    text_from_user = params[:user_text]
+    @common_text = []
+    @analyzed_text = TextAnalyzer.new(params[:user_text])
+    @analyzed_text.most_used_letter.each do |key, value|
+      @common_text += [key.upcase, value]
+    end
 
     erb :results
   end
