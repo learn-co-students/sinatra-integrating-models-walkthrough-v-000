@@ -6,9 +6,9 @@ class App < Sinatra::Base
     erb :index
   end
 
-  post '/' do
+  post '/' do #is this saying post to this route? not receiving from route?
     text_from_user = params[:user_text]
-
+    @analyzed_text = TextAnalyzer.new(text_from_user)
     erb :results
   end
 end
