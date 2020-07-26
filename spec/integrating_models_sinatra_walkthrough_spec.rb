@@ -27,7 +27,7 @@ describe App do
     end
   end
 
-  describe 'TextAnalyzer Class' do
+   describe 'TextAnalyzer Class' do
     let!(:words) { TextAnalyzer.new("mirror mirror on the wall") }
 
     it 'can initialize a new instance of the class' do
