@@ -10,4 +10,4 @@
 <% key = @analyzed_text.most_used_letter.keys[0] %>
 <% value = @analyzed_text.most_used_letter[key] %>
 
-<h2>Most Common Letter: <%= key %>, used <%= value %> times</h2>
+<h2>Most Common Letter: <%= key.upcase %>, used <%= value %> times</h2>
